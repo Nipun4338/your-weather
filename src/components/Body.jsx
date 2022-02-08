@@ -87,7 +87,7 @@ function Body(){
     var sunrise=new Date(sys.sunrise*1000).toLocaleTimeString();
     var sunset=new Date(sys.sunset*1000).toLocaleTimeString();
     var fetchedTime=new Date(dt*1000).toLocaleTimeString();
-    var hour=new Date(dt*1000).getHours();
+    var hour=new Date().getHours();
     var backgroundImage="";
     if(hour>=20 && hour<=22)
     {

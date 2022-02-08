@@ -1,6 +1,5 @@
 import React, {useEffect,useState} from "react";
-import data from "./data";
-import { Button, Form, Container, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
+import { Button, Form, Container, Col, InputGroup, FormControl } from 'react-bootstrap';
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -81,7 +80,7 @@ function Body(){
     return <div>Loading...</div>;
   } else {
     const {weather : [{icon, main: main2}]}=items;
-    const {dt, main, wind, clouds, sys, id, name, visibility}=items;
+    const {dt, main, wind, clouds, sys, name}=items;
     var weatherImg="http://openweathermap.org/img/wn/"+icon+"@2x.png";
     var sunrise=new Date(sys.sunrise*1000).toLocaleTimeString();
     var sunset=new Date(sys.sunset*1000).toLocaleTimeString();

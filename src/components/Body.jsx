@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { Button, Form, Container, Col, InputGroup, FormControl, Image } from 'react-bootstrap';
 import Header from "./Header";
 import Footer from "./Footer";
+import data from "./data"
 
 
 function Body(){
@@ -29,10 +30,14 @@ function Body(){
         // instead of a catch() block so that we don't swallow
         // exceptions from actual bugs in components.
         (error) => {
+          setItems(data);
           setIsLoaded(true);
           setError(error);
         }
-      )
+      ).catch(error => {
+        setItems(data);
+        setIsLoaded(true);
+      });
     }
     function firstFetch(){
         if(isGet)
@@ -81,6 +86,13 @@ function Body(){
   } else if (!isLoaded) {
     return <div>Loading...</div>;
   } else {
+    const {cod}=items;
+    if(cod === "404")
+    {
+      setItems(data);
+      console.log(items);
+      return <div>Error:</div>;
+    }
     const {weather : [{icon, main: main2}]}=items;
     const {dt, main, wind, clouds, sys, name}=items;
     var weatherImg="http://openweathermap.org/img/wn/"+icon+"@2x.png";

@@ -130,11 +130,12 @@ function Body(){
     }
     return (
     <div style={{backgroundImage: "url("+backgroundImage+")",
-    height: "auto",
+    height: "100%",
     width: "100%",
-backgroundPosition: "center",
-backgroundRepeat: "no-repeat",
-backgroundSize: "cover"}}>
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    opacity: "0.9"}}>
     <Header />
       <Container>
       <Col>

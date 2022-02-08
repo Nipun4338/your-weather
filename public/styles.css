@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+  height: 100%;
+}
+
+header{
+  padding-top: 50px;
+}
+
+Form{
+  padding-top: 20px;
+}
+
+
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  
+  footer p {
+    color: white;
+  }
+
+  h1,h2,h3,h4,h5,h6,p{
+    color: #fff;
+  }
+
+  #row{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  

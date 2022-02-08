@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from "react";
+import React, {useState} from "react";
 import { Button, Form, Container, Col, InputGroup, FormControl } from 'react-bootstrap';
 import Header from "./Header";
 import Footer from "./Footer";
@@ -34,13 +34,15 @@ function Body(){
         }
       )
     }
-    useEffect(()=>{
+    function firstFetch(){
         if(isGet)
         {
             setIsGet(false);
             getData();
         } 
-    }, []);
+    }
+
+    firstFetch();
 
     function changeLocation(event){
         setIsGet(true);

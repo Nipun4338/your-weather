@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Button, Form, Container, Col, InputGroup, FormControl } from 'react-bootstrap';
+import { Button, Form, Container, Col, InputGroup, FormControl, Image } from 'react-bootstrap';
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -130,10 +130,8 @@ function Body(){
     }
     return (
     <div style={{backgroundImage: "url("+backgroundImage+")",
-   /* Full height */
-  height: "100%",
-
-/* Center and scale the image nicely */
+    height: "auto",
+    width: "100%",
 backgroundPosition: "center",
 backgroundRepeat: "no-repeat",
 backgroundSize: "cover"}}>
@@ -160,7 +158,7 @@ backgroundSize: "cover"}}>
         <h1>{name}</h1>
         <h2>{main.temp}°C</h2>
         <p>Feel's like {main.feels_like}°C</p>
-        <img src={weatherImg} alt="Icon"/>
+        <Image src={weatherImg} alt="Icon"/>
         <h4>{main2}</h4>
         <h5>Pressure: {main.pressure}hPa</h5>
         <h5>Humidity: {main.humidity}%</h5>

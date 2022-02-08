@@ -40,7 +40,7 @@ function Body(){
             setIsGet(false);
             getData();
         } 
-    }, []);
+    });
 
     function changeLocation(event){
         setIsGet(true);
@@ -158,7 +158,7 @@ backgroundSize: "cover"}}>
         <h1>{name}</h1>
         <h2>{main.temp}°C</h2>
         <p>Feel's like {main.feels_like}°C</p>
-        <img src={weatherImg}/>
+        <img src={weatherImg} alt="Icon"/>
         <h4>{main2}</h4>
         <h5>Pressure: {main.pressure}hPa</h5>
         <h5>Humidity: {main.humidity}%</h5>

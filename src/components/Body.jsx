@@ -40,7 +40,7 @@ function Body(){
             setIsGet(false);
             getData();
         } 
-    });
+    }, []);
 
     function changeLocation(event){
         setIsGet(true);

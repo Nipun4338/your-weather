@@ -127,7 +127,7 @@ function Body(){
     }
     else if(hour>=15 && hour<=16)
     {
-      backgroundImage="./IMG/mid-noon.jpg";
+      backgroundImage="./IMG/mid-noon.png";
     }
     else if(hour>=17 && hour<=18)
     {

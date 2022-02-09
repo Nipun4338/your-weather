@@ -67,8 +67,8 @@ function Body(){
             getData();
             setIsGet(false);
         }while(isGet)
-        setTempLocation("");
       }
+      setTempLocation("");
       event.preventDefault();
     }
 

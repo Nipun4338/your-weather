@@ -74,11 +74,10 @@ function Body(){
 
     function locationTextChange(event){
       var value=event.target.value;
-      if(value.length>0)
-      {
-        setTempLocation(value);
-      }
+      setTempLocation(value);
     }
+
+    console.log(tempLocation);
 
 
   if (error) {
